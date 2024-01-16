@@ -1,3 +1,27 @@
+<?php
+    /**
+    * @author Carlos García Cachón
+    * @version 1.3
+    * @since 10/01/2024
+    * @copyright Todos los derechos reservados a Carlos García
+    * 
+    * @Annotation Proyecto LoginLogoffTema5 - Parte de 'Index' 
+    * 
+    */
+   require_once 'config/configAPP.php';
+    
+    if (!isset($_COOKIE['idioma'])) { // Comprobamos si la cookie esta declarada
+        setcookie("idioma", "SP", time() + 2592000); // En caso negativo la creamos y ponemos el valor por defecto
+        header('Location: indexLoginLogoffES.php'); // Recargamos la página con el nuevo idioma
+        exit();
+    }
+
+    if (isset($_REQUEST['botonIdioma'])) { // Comprobamos si el usuario a pulsado algún botón de idioma
+        setcookie("idioma", $_REQUEST['botonIdioma'], time() + 2592000); // En caso afirmativo creamos la cookie y la cargamos con el valor seleccionado y ponemos una fecha de caducidad de 1 mes
+        header('Location: indexLoginLogoff'.$_REQUEST['botonIdioma'].'.php'); // Recargamos la página con el nuevo idioma
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -54,13 +78,7 @@
             <h1>TEMA 5: APLICACIÓN LOGIN / LOGOFF</h1>
         </header>
         <main>
-            <form class="opcionesIdioma">
-                <input type="submit" value="ES" name="botonIdioma">
-                <input type="submit" value="UK" name="botonIdioma">
-            </form>
-            <img src="./webroot/images/mapa.png" alt="NO SE VE.">
-            <br>
-            <a href="./codigoPHP/es/Login.php">LOGIN</a>
+            
         </main>
         <footer>
             <p>2023-2024 © All rights reserved. <a href="https://github.com/kyrafenrir/202DWESLoginLogoffTema5">Erika Martínez Pérez</a></p>
