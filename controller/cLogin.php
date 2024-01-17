@@ -34,7 +34,7 @@
     $aErrores = ['password' => ''];
 
     //Si el usuario pulsa el botón 'IniciarSesion', mando al usuario al index de DWES
-    if(isset($_REQUEST['iniciarSesion'])){ 
+    /*if(isset($_REQUEST['iniciarSesion'])){ 
         // Valido la sintaxis del usuario y contraseña introducidos
         $aErrores['user'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['user'], 15, 3, OBLIGATORIO);
         $aErrores['password'] = validacionFormularios::validarpassword($_REQUEST['password'], 8, 3, 1, OBLIGATORIO);
@@ -56,13 +56,13 @@
         }
     } else {
         $entradaOK = false;
-    }
+    }*/
     if($entradaOK) {
         /**
          * Si los datos anteriores estan correctos, por medio del metodo 'registrarUltimaConexion' 
          * actualizaremos el número de conexiones y la fecha y hora de última conexión
          */ 
-        $oUsuarioValido = UsuarioPDO::registrarUltimaConexion($oUsuarioValido);
+        //$oUsuarioValido = UsuarioPDO::registrarUltimaConexion($oUsuarioValido);
 
         $_SESSION['user202DWESLoginLogoutMulticapaPOO'] = $oUsuarioValido; // Almaceno el Usuario en una variable de sesión 
         $_SESSION['paginaEnCurso'] = 'inicioPrivado'; // Asigno a la pagina en curso la pagina de inicioPrivado
@@ -71,4 +71,3 @@
     }
 
     require_once $view['layout']; // Cargo la vista de 'login'
-

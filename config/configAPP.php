@@ -10,13 +10,6 @@
      */
     require_once 'core/231018libreriaValidacion.php';
 
-    require_once 'model/DB.php';
-    require_once 'model/DBPDO.php';
-    require_once 'model/ErrorApp.php';
-    require_once 'model/Usuario.php';
-    require_once 'model/UsuarioDB.php';
-    require_once 'model/UsuarioPDO.php';
-
     $controller = [
         'inicioPublico' => 'controller/cInicioPublico.php',
         'login' => 'controller/cLogin.php',
