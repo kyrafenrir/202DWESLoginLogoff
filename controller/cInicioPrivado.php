@@ -18,7 +18,7 @@ if(isset($_REQUEST['cerrarSesion'])){
 
 //Si el usuario pulsa el botón 'Detalle', mando al usuario al index de DWES
 if(isset($_REQUEST['detalle'])){
-    $_SESSION['paginaEnCurso'] = 'wip'; // Asigno a la pagina en curso la pagina de WIP (Work in Progress)
+    $_SESSION['paginaEnCurso'] = 'detalle'; // Asigno a la pagina en curso la pagina de WIP (Work in Progress)
     header('Location: index.php'); // Redirecciono al index de la APP
     exit;
 }

@@ -14,13 +14,17 @@
         'inicioPublico' => 'controller/cInicioPublico.php',
         'login' => 'controller/cLogin.php',
         'inicioPrivado' => 'controller/cInicioPrivado.php',
-        'tecnologias' => 'controller/cTecnologias.php',
+        'detalle' => 'controller/cDetalle.php',
         'rss' => 'controller/cRSS.php',
         'registro' => 'controller/cRegistro.php',
         'miCuenta' => 'controller/cMiCuenta.php',
         'borrarCuenta' => 'controller/cBorrarCuenta.php',
         'wip' => 'controller/cWIP.php',
-        'error' => 'controller/cError.php'
+        'error' => 'controller/cError.php',
+        'cambiarContraseña' => 'controller/cCambiarPassword.php',
+        'consultarDepartamento' => 'controller/cMtoDepartamento.php',
+        'añadirDepartamento' => 'controller/cAltaDepartamento.php',
+        'editarDepartamento' => 'controller/cConsultarModificarDepartamento.php'
     ];
     $view = [
         'layout' => 'view/layout.php',
