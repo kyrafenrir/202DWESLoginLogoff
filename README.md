@@ -10,8 +10,8 @@ Erika Martínez Pérez
 Documentacion de la aplicacion Login/Logoff de la asignatura DWES
 ## Funcionalidades
 ## Entorno de desarrollo
-[http://daw202.isauces.local/202DWESLoginLogoff/indexLoginLogoff.php]
+[http://daw202.isauces.local/202DWESLoginLogoffMulticapaPOO/index.php]
 (Entorno de desarrollo de Erika)
 ## Entorno de explotacion
-[http://daw202.ieslossauces.es/202DWESLoginLogoff/indexLoginLogoff.php]
+[http://daw202.ieslossauces.es/202DWESLoginLogoffMulticapaPOO/index.php]
 (Entorno de explotación de Erika)
